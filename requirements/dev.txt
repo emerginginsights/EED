@@ -1,2 +1,4 @@
 -r common.txt
 
+pylint==2.5.2
+

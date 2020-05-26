@@ -17,6 +17,11 @@ def country_stats():
     res_dict = {
         'country_name': country.country_name,
         'country_id': country.country_id,
+        'language': country.country_language,
+        'description' : country.country_description,
+        'iso_id': country.country_isoid,
+        'prev_election': country.country_prev_election,
+        'next_election': country.country_next_election,
     }
 
     indicators = Indicator.query.filter(Indicator.country_id == country.country_id).all()

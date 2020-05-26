@@ -1,5 +1,5 @@
 from flask_sqlalchemy import SQLAlchemy
-from sqlalchemy import Integer, Column, String, Numeric
+from sqlalchemy import Integer, Column, String, Numeric, Date, LargeBinary
 
 db = SQLAlchemy()
 
@@ -10,13 +10,13 @@ class Country(db.Model):
     country_id = Column(Integer, primary_key=True)
     country_name = Column(String)
     country_isoid = Column(String)
-    # country_flag BYTEA,
-    # country_map BYTEA,
+    country_flag = Column(LargeBinary)
+    country_map = Column(LargeBinary)
     country_description = Column(String)
     country_area = Column(Integer)
     country_language = Column(String)
-    # country_prev_election DATE,
-    # country_next_election DATE
+    country_prev_election = Column(Date)
+    country_next_election = Column(Date)
 
 
 class Indicator(db.Model):
