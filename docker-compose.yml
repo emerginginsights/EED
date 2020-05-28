@@ -1,0 +1,33 @@
+version: '3.7'
+
+services:
+  eed:
+    image: eed
+    volumes:
+      - ./services/web/:/usr/src/app/
+    ports:
+      - 80:5000
+    environment:
+      EED_DB_HOST: pg-db
+    depends_on:
+      - pg-db
+    networks:
+      - eed-network
+
+
+  pg-db:
+    image: postgres:12-alpine
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    networks:
+      - eed-network
+
+networks:
+  eed-network:
+    driver: bridge
+
+volumes:
+  postgres_data:

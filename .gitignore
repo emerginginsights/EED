@@ -1,3 +1,6 @@
 .idea
 __pycache__
 venv
+/eed.tar
+/wbscript/none_countries.json
+/wbscript/results.json

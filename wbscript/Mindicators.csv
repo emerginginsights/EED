@@ -1,0 +1,129 @@
+API_Code,IndicatorName,Identifier,ShortDefinition,Source,Topic
+1.1_ACCESS.ELECTRICITY.TOT,Access to electricity (% of total population),1000,Access to electricity (% of to,World Bank,Access to energy
+1.1_TOTAL.FINAL.ENERGY.CONSUM,Total final energy consumption (TFEC) (TJ),1010,Total final energy consumption,World Bank,Renewable Energy
+1.2_ACCESS.ELECTRICITY.RURAL,Access to electricity (% of rural population with access),1020,Access to electricity (% of ru,World Bank,Access to energy
+1.3_ACCESS.ELECTRICITY.URBAN,Access to electricity (% of urban population with access),1030,Access to electricity (% of ur,World Bank,Access to energy
+2.1_SHARE.TOTAL.RE.IN.TFEC,Renewable energy share of TFEC (%),1040,Renewable energy share of TFEC,World Bank,Renewable Energy
+3.1_RE.CONSUMPTION,Renewable energy consumption (TJ),1050,Renewable energy consumption (,World Bank,Renewable Energy
+4.1_SHARE.RE.IN.ELECTRICITY,Renewable electricity share of total electricity output (%),1060,Renewable electricity share of,World Bank,Renewable Energy
+4.1.1_TOTAL.ELECTRICITY.OUTPUT,Total electricity output (GWh),1070,Total electricity output (GWh),World Bank,Renewable Energy
+4.1.2_REN.ELECTRICITY.OUTPUT,Renewable electricity output (GWh),1080,Renewable electricity output (,World Bank,Renewable Energy
+6.1_PRIMARY.ENERGY.INTENSITY,Energy intensity level of primary energy (MJ/2011 USD PPP),1090,Energy intensity level of prim,World Bank,Energy efficiency
+AG.SRF.TOTL.K2,Surface area (sq. km),1100,Surface area is a country's to,Surface area is a country's to,Food and Agriculture Organizat
+EG.ELC.ACCS.RU.ZS,"Access to electricity, rural (% of rural population)",1110,"Access to electricity, rural i","World Bank, Sustainable Energy",Environment: Energy production
+EG.ELC.ACCS.UR.ZS,"Access to electricity, urban (% of urban population)",1120,"Access to electricity, urban i","World Bank, Sustainable Energy",Environment: Energy production
+EG.ELC.COAL.ZS,Electricity production from coal sources (% of total),1130,Sources of electricity refer t,International Energy Agency (I,Environment: Energy production
+EG.ELC.FOSL.ZS,"Electricity production from oil, gas and coal sources (% of total)",1140,Sources of electricity refer t,International Energy Agency (I,Environment: Energy production
+EG.ELC.HYRO.ZS,Electricity production from hydroelectric sources (% of total),1150,Sources of electricity refer t,International Energy Agency (I,Environment: Energy production
+EG.ELC.LOSS.ZS,Electric power transmission and distribution losses (% of output),1160,Electric power transmission an,International Energy Agency (I,Environment: Energy production
+EG.ELC.NGAS.ZS,Electricity production from natural gas sources (% of total),1170,Sources of electricity refer t,International Energy Agency (I,Environment: Energy production
+EG.ELC.NUCL.ZS,Electricity production from nuclear sources (% of total),1180,Sources of electricity refer t,International Energy Agency (I,Environment: Energy production
+EG.ELC.PETR.ZS,Electricity production from oil sources (% of total),1190,Sources of electricity refer t,International Energy Agency (I,Environment: Energy production
+EG.ELC.RNWX.ZS,"Electricity production from renewable sources, excluding hydroelectric (% of total)",1200,Sources of electricity refer t,International Energy Agency (I,Environment: Energy production
+EG.FEC.RNEW.ZS,Renewable energy consumption (% of total final energy consumption),1210,Renewable energy consumption i,"World Bank, Sustainable Energy",Environment: Energy production
+EG.IMP.CONS.ZS,"Energy imports, net (% of energy use)",1220,Net energy imports are estimat,International Energy Agency (I,Environment: Energy production
+EG.USE.COMM.CL.ZS,Alternative and nuclear energy (% of total energy use),1230,Clean energy is noncarbohydrat,International Energy Agency (I,Environment: Energy production
+EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),1240,"Fossil fuel comprises coal, oi",International Energy Agency (I,Environment: Energy production
+EG.USE.CRNW.ZS,Combustible renewables and waste (% of total energy),1250,Combustible renewables and was,International Energy Agency (I,Environment: Energy production
+EG.USE.ELEC.KH.PC,Electric power consumption (kWh per capita),1260,Electric power consumption mea,International Energy Agency (I,Environment: Energy production
+EG.USE.PCAP.KG.OE,Energy use (kg of oil equivalent per capita),1270,Energy use refers to use of pr,International Energy Agency (I,Environment: Energy production
+EG.USE.PCAP.KG.OE,Energy use (kg of oil equivalent per capita),1280,Energy use refers to use of pr,International Energy Agency (I,Environment: Energy production
+EN.ATM.CO2E.GF.KT,CO2 emissions from gaseous fuel consumption (kt),1290,Energy use refers to use of pr,International Energy Agency (I,Environment: Energy production
+EN.ATM.CO2E.GF.ZS,CO2 emissions from gaseous fuel consumption (% of total),1300,Energy use refers to use of pr,International Energy Agency (I,Environment: Energy production
+EN.ATM.CO2E.KT,CO2 emissions (kt),1310,Carbon dioxide emissions are t,Carbon dioxide emissions are t,Carbon Dioxide Information Ana
+EN.ATM.CO2E.LF.KT,CO2 emissions from liquid fuel consumption (kt),1320,Carbon dioxide emissions are t,Carbon dioxide emissions are t,Carbon Dioxide Information Ana
+EN.ATM.CO2E.LF.ZS,CO2 emissions from liquid fuel consumption (% of total),1330,Carbon dioxide emissions are t,Carbon dioxide emissions are t,Carbon Dioxide Information Ana
+EN.ATM.CO2E.PC,CO2 emissions (metric tons per capita),1340,Carbon dioxide emissions are t,Carbon dioxide emissions are t,Carbon Dioxide Information Ana
+EN.ATM.CO2E.SF.KT,CO2 emissions from solid fuel consumption (kt),1350,Carbon dioxide emissions are t,Carbon dioxide emissions are t,Carbon Dioxide Information Ana
+EN.ATM.CO2E.SF.ZS,CO2 emissions from solid fuel consumption (% of total),1360,Carbon dioxide emissions are t,Carbon dioxide emissions are t,Carbon Dioxide Information Ana
+EN.ATM.GHGO.KT.CE,"Other greenhouse gas emissions, HFC, PFC and SF6 (thousand metric tons of CO2 equivalent)",1370,Other greenhouse gas emissions,Other greenhouse gas emissions,International Energy Agency (I
+EN.ATM.GHGO.ZG,Other greenhouse gas emissions (% change from 1990),1380,Other greenhouse gas emissions,Other greenhouse gas emissions,International Energy Agency (I
+EN.ATM.GHGT.KT.CE,Total greenhouse gas emissions (kt of CO2 equivalent),1390,Total greenhouse gas emissions,"European Commission, Joint Res",Environment: Emissions
+EN.ATM.GHGT.ZG,Total greenhouse gas emissions (% change from 1990),1400,Total greenhouse gas emissions,World Bank staff estimates fro,Environment: Emissions
+EN.ATM.METH.AG.KT.CE,Agricultural methane emissions (thousand metric tons of CO2 equivalent),1410,Other greenhouse gas emissions,Other greenhouse gas emissions,International Energy Agency (I
+EN.ATM.METH.AG.ZS,Agricultural methane emissions (% of total),1420,Agricultural methane emissions,Agricultural methane emissions,International Energy Agency (I
+EN.ATM.METH.EG.KT.CE,Methane emissions in energy sector (thousand metric tons of CO2 equivalent),1430,Methane emissions from energy ,"European Commission, Joint Res",Environment: Emissions
+EN.ATM.METH.EG.ZS,Energy related methane emissions (% of total),1440,Methane emissions from energy ,World Bank staff estimates fro,Environment: Emissions
+EN.ATM.METH.IN.ZS,Industrial methane emissions (% of total),1450,Industrial methane emissions a,Industrial methane emissions a,International Energy Agency (I
+EN.ATM.METH.KT.CE,Methane emissions (kt of CO2 equivalent),1460,Methane emissions are those st,Methane emissions are those st,International Energy Agency (I
+EN.ATM.METH.ZG,Methane emissions (% change from 1990),1580,Methane emissions are those st,Methane emissions are those st,International Energy Agency (I
+EN.ATM.NOXE.AG.KT.CE,Agricultural nitrous oxide emissions (thousand metric tons of CO2 equivalent),1470,Methane emissions are those st,Methane emissions are those st,International Energy Agency (I
+EN.ATM.NOXE.AG.ZS,Agricultural nitrous oxide emissions (% of total),1480,Methane emissions are those st,Methane emissions are those st,International Energy Agency (I
+EN.ATM.NOXE.EG.ZS,Nitrous oxide emissions in energy sector (% of total),1490,Methane emissions are those st,Methane emissions are those st,International Energy Agency (I
+EN.ATM.NOXE.KT.CE,Nitrous oxide emissions (thousand metric tons of CO2 equivalent),1500,Nitrous oxide emissions are em,Nitrous oxide emissions are em,International Energy Agency (I
+EN.ATM.NOXE.ZG,Nitrous oxide emissions (% change from 1990),1510,Nitrous oxide emissions are em,Nitrous oxide emissions are em,International Energy Agency (I
+EN.CO2.BLDG.ZS,CO2 emissions from residential buildings and commercial and public services (% of total fuel combustion),1520,Nitrous oxide emissions are em,Nitrous oxide emissions are em,International Energy Agency (I
+EN.CO2.ETOT.ZS,"CO2 emissions from electricity and heat production, total (% of total fuel combustion)",1530,Nitrous oxide emissions are em,Nitrous oxide emissions are em,International Energy Agency (I
+EN.CO2.MANF.ZS,CO2 emissions from manufacturing industries and construction (% of total fuel combustion),1540,Nitrous oxide emissions are em,Nitrous oxide emissions are em,International Energy Agency (I
+EN.CO2.OTHX.ZS,"CO2 emissions from other sectors, excluding residential buildings and commercial and public services (% of total fuel combustion)",1550,Nitrous oxide emissions are em,Nitrous oxide emissions are em,International Energy Agency (I
+EN.CO2.TRAN.ZS,CO2 emissions from transport (% of total fuel combustion),1560,Nitrous oxide emissions are em,Nitrous oxide emissions are em,International Energy Agency (I
+IC.BUS.EASE.XQ,Ease of doing business index (1=most business-friendly regulations),1570,Ease of doing business index r,World Bank,Private Sector & Trade: Busine
+NY.ADJ.NNTY.PC.CD,Adjusted net national income per capita (current US$),1590,Adjusted net national income i,World Bank staff estimates bas,Economic Policy & Debt: Nation
+NY.GDP.MKTP.KD.ZG,GDP growth (annual %),1600,Annual percentage growth rate ,Annual percentage growth rate ,World Bank national accounts d
+NY.GDP.MKTP.PP.CD,"GDP, PPP (current international $)",1610,PPP GDP is gross domestic prod,"World Bank, International Comp",Economic Policy & Debt: Purcha
+SI.POV.NAHC,Poverty headcount ratio at national poverty lines (% of population),1620,National poverty headcount rat,"World Bank, Global Poverty Wor",Poverty: Poverty rates
+SP.POP.0004.FE.5Y,"Population ages 0-4, female (% of female population)",1630,Population ages 0 to 4 is the ,Population ages 0 to 4 is the ,World Bank staff estimates fro
+SP.POP.0004.MA.5Y,"Population ages 0-4, male (% of male population)",1640,Population ages 0 to 4 is the ,Population ages 0 to 4 is the ,World Bank staff estimates fro
+SP.POP.0014.FE.IN,"Population ages 0-14, female",1650,Female population between the ,Female population between the ,World Bank staff estimates fro
+SP.POP.0014.FE.ZS,"Population ages 0-14, female (% of total)",1660,Female population between the ,Female population between the ,World Bank staff estimates fro
+SP.POP.0014.MA.IN,"Population ages 0-14, male",1670,Male population between the ag,Male population between the ag,World Bank staff estimates fro
+SP.POP.0014.MA.ZS,"Population ages 0-14, male (% of total)",1680,Male population between the ag,Male population between the ag,World Bank staff estimates fro
+SP.POP.0014.TO,"Population ages 0-14, total",1690,Total population between the a,Total population between the a,World Bank staff estimates fro
+SP.POP.0014.TO.ZS,Population ages 0-14 (% of total),1700,Population between the ages 0 ,Population between the ages 0 ,World Bank staff estimates fro
+SP.POP.0024.TO.ZS,Population 0-24 (% of total population),1710,Population ages 0 to 24 is the,Population ages 0 to 24 is the,World Bank staff estimates fro
+SP.POP.0509.FE.5Y,"Population ages 5-9, female (% of female population)",1720,Population ages 5 to 9 is the ,Population ages 5 to 9 is the ,World Bank staff estimates fro
+SP.POP.0509.MA.5Y,"Population ages 5-9, male (% of male population)",1730,Population ages 5 to 9 is the ,Population ages 5 to 9 is the ,World Bank staff estimates fro
+SP.POP.1014.FE.5Y,"Population ages 10-14, female (% of female population)",1740,Population ages 10 to 14 is th,Population ages 10 to 14 is th,World Bank staff estimates fro
+SP.POP.1014.MA.5Y,"Population ages10-14, male (% of male population)",1750,Population ages 10 to 14 is th,Population ages 10 to 14 is th,World Bank staff estimates fro
+SP.POP.1519.FE.5Y,"Population ages 15-19, female (% of female population)",1760,Population ages 15 to 19 is th,Population ages 15 to 19 is th,World Bank staff estimates fro
+SP.POP.1519.MA.5Y,"Population ages 15-19, male (% of male population)",1770,Population ages 15 to 19 is th,Population ages 15 to 19 is th,World Bank staff estimates fro
+SP.POP.1564.FE.IN,"Population ages 15-64, female",1780,Female population between the ,Female population between the ,World Bank staff estimates fro
+SP.POP.1564.FE.ZS,"Population ages 15-64, female (% of total)",1790,Female population between the ,Female population between the ,World Bank staff estimates fro
+SP.POP.1564.MA.IN,"Population ages 15-64, male",1800,Male population between the ag,Male population between the ag,World Bank staff estimates fro
+SP.POP.1564.MA.ZS,"Population ages 15-64, male (% of total)",1810,Male population between the ag,Male population between the ag,World Bank staff estimates fro
+SP.POP.1564.TO,"Population ages 15-64, total",1820,Total population between the a,Total population between the a,World Bank staff estimates fro
+SP.POP.1564.TO.ZS,Population ages 15-64 (% of total),1830,Population ages 15 to 64 is th,Population ages 15 to 64 is th,World Bank staff estimates fro
+SP.POP.2024.FE.5Y,"Population ages 20-24, female (% of female population)",1840,Population ages 20 to 24 is th,Population ages 20 to 24 is th,World Bank staff estimates fro
+SP.POP.2024.MA.5Y,"Population ages 20-24, male (% of male population)",1850,Population ages 20 to 24 is th,Population ages 20 to 24 is th,World Bank staff estimates fro
+SP.POP.2529.FE.5Y,"Population ages 25-29, female (% of female population)",1860,Population ages 25 to 29 is th,Population ages 25 to 29 is th,World Bank staff estimates fro
+SP.POP.2529.MA.5Y,"Population ages 25-29, male (% of male population)",1870,Population ages 25 to 29 is th,Population ages 25 to 29 is th,World Bank staff estimates fro
+SP.POP.3034.FE.5Y,"Population ages 30-34, female (% of female population)",1880,Population ages 30 to 34 is th,Population ages 30 to 34 is th,World Bank staff estimates fro
+SP.POP.3034.MA.5Y,"Population ages 30-34, male (% of male population)",1890,Population ages 30 to 34 is th,Population ages 30 to 34 is th,World Bank staff estimates fro
+SP.POP.3539.FE.5Y,"Population ages 35-39, female (% of female population)",1900,Population ages 35 to 39 is th,Population ages 35 to 39 is th,World Bank staff estimates fro
+SP.POP.3539.MA.5Y,"Population ages 35-39, male (% of male population)",1910,Population ages 35 to 39 is th,Population ages 35 to 39 is th,World Bank staff estimates fro
+SP.POP.4044.FE.5Y,"Population ages 40-44, female (% of female population)",1920,Population ages 40 to 44 is th,Population ages 40 to 44 is th,World Bank staff estimates fro
+SP.POP.4044.MA.5Y,"Population ages 40-44, male (% of male population)",1930,Population ages 40 to 44 is th,Population ages 40 to 44 is th,World Bank staff estimates fro
+SP.POP.4549.FE.5Y,"Population ages 45-49, female (% of female population)",1940,Population ages 45 to 49 is th,Population ages 45 to 49 is th,World Bank staff estimates fro
+SP.POP.4549.MA.5Y,"Population ages 45-49, male (% of male population)",1950,Population ages 45 to 49 is th,Population ages 45 to 49 is th,World Bank staff estimates fro
+SP.POP.5054.FE.5Y,"Population ages 50-54, female (% of female population)",1960,Population ages 50 to 54 is th,Population ages 50 to 54 is th,World Bank staff estimates fro
+SP.POP.5054.MA.5Y,"Population ages 50-54, male (% of male population)",1970,Population ages 50 to 54 is th,Population ages 50 to 54 is th,World Bank staff estimates fro
+SP.POP.5559.FE.5Y,"Population ages 55-59, female (% of female population)",1980,Population ages 55 to 59 is th,Population ages 55 to 59 is th,World Bank staff estimates fro
+SP.POP.5559.MA.5Y,"Population ages 55-59, male (% of male population)",1990,Population ages 55 to 59 is th,Population ages 55 to 59 is th,World Bank staff estimates fro
+SP.POP.6064.FE.5Y,"Population ages 50-64, female (% of female population)",2000,Population ages 60 to 64 is th,Population ages 60 to 64 is th,World Bank staff estimates fro
+SP.POP.6064.MA.5Y,"Population ages 50-64, male (% of male population)",2010,Population ages 60 to 64 is th,Population ages 60 to 64 is th,World Bank staff estimates fro
+SP.POP.6569.FE.5Y,"Population ages 65-69, female (% of female population)",2020,Population ages 65 to 69 is th,Population ages 65 to 69 is th,World Bank staff estimates fro
+SP.POP.6569.MA.5Y,"Population ages 65-69, male (% of male population)",2030,Population ages 65 to 69 is th,Population ages 65 to 69 is th,World Bank staff estimates fro
+SP.POP.65UP.FE.IN,"Population ages 65 and above, female",2040,Female population 65 years of ,Female population 65 years of ,World Bank staff estimates fro
+SP.POP.65UP.FE.ZS,"Population ages 65 and above, female (% of total)",2050,Female population 65 years of ,Female population 65 years of ,World Bank staff estimates fro
+SP.POP.65UP.MA.IN,"Population ages 65 and above, male",2060,Male population 65 years of ag,Male population 65 years of ag,World Bank staff estimates fro
+SP.POP.65UP.MA.ZS,"Population ages 65 and above, male (% of total)",2070,Male population 65 years of ag,Male population 65 years of ag,World Bank staff estimates fro
+SP.POP.65UP.TO,"Population ages 65 and above, total",2080,Total population 65 years of a,Total population 65 years of a,World Bank staff estimates fro
+SP.POP.65UP.TO.ZS,Population ages 65 and above (% of total),2090,Population ages 65 and above a,Population ages 65 and above a,World Bank staff estimates fro
+SP.POP.7074.FE.5Y,"Population ages 70-74, female (% of female population)",2100,Population ages 70 to 74 is th,Population ages 70 to 74 is th,World Bank staff estimates fro
+SP.POP.7074.MA.5Y,"Population ages 70-74, male (% of male population)",2110,Population ages 70 to 74 is th,Population ages 70 to 74 is th,World Bank staff estimates fro
+SP.POP.7579.FE.5Y,"Population ages 75-79, female (% of female population)",2120,Population ages 75 to 79 is th,Population ages 75 to 79 is th,World Bank staff estimates fro
+SP.POP.7579.MA.5Y,"Population ages 75-79, male (% of male population)",2130,Population ages 75 to 79 is th,Population ages 75 to 79 is th,World Bank staff estimates fro
+SP.POP.80UP.FE.5Y,"Population ages 80 and above, female (% of female population)",2140,Population ages 80 and above i,Population ages 80 and above i,World Bank staff estimates fro
+SP.POP.80UP.MA.5Y,"Population ages 80 and above, male (% of male population)",2150,Population ages 80 and above i,Population ages 80 and above i,World Bank staff estimates fro
+SP.POP.GROW,Population growth (annual %),2160,Annual population growth rate.,Annual population growth rate ,Derived from total population.
+SP.POP.TOTL,"Population, total",2170,Total population is based on t,Total population is based on t,(1) United Nations Population 
+SP.POP.TOTL.FE.IN,"Population, female",2180,Female population is based on ,Female population is based on ,Derived from data on total pop
+SP.POP.TOTL.FE.ZS,"Population, female (% of total)",2190,Female population is the perce,Female population is the perce,United Nations Population Divi
+SP.POP.TOTL.MA.IN,"Population, male",2200,Male population is based on th,Male population is based on th,Derived from data on total pop
+SP.POP.TOTL.MA.ZS,"Population, male (% of total)",2210,Male population is the percent,Male population is the percent,United Nations Population Divi
+SP.RUR.TOTL,Rural population,2220,Rural population refers to peo,Rural population refers to peo,The data on urban population s
+SP.RUR.TOTL.ZG,Rural population growth (annual %),2230,Rural population refers to peo,Rural population refers to peo,World Bank Staff estimates bas
+SP.RUR.TOTL.ZS,Rural population (% of total population),2240,Rural population refers to peo,Rural population refers to peo,World Bank Staff estimates bas
+SP.URB.GROW,Urban population growth (annual %),2250,Urban population refers to peo,Urban population refers to peo,World Bank Staff estimates bas
+SP.URB.TOTL,Urban population,2260,Urban population refers to peo,Urban population refers to peo,World Bank Staff estimates bas
+SP.URB.TOTL.IN.ZS,Urban population (% of total),2270,Urban population refers to peo,Urban population refers to peo,"United Nations, World Urbaniza"

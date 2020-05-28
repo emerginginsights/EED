@@ -1,12 +1,22 @@
+import os
+
 from flask import Flask, jsonify
 
-from .api import stats_api_bp
-from .models import db
+from eed.api import stats_api_bp
+from eed.models import db
 
 
 def create_app():
     app = Flask(__name__)
     app.config.from_pyfile('config.cfg')
+
+    # Configure by environment variables
+    if os.getenv('EED_DB_NAME', None) or os.getenv('EED_DB_HOST', None):
+        db_name = os.getenv('EED_DB_NAME', 'test_worldbank')
+        db_host = os.getenv('EED_DB_HOST', 'localhost')
+        db_user = os.getenv('EED_DB_USER', 'postgres')
+        db_pass = os.getenv('EED_DB_PASS', 'postgres')
+        app.config['SQLALCHEMY_DATABASE_URI'] = f'postgresql://{db_user}:{db_pass}@{db_host}/{db_name}'
 
     db.init_app(app)
 
@@ -17,4 +27,3 @@ def create_app():
         return jsonify('pong')
 
     return app
-
