@@ -18,6 +18,17 @@ class Country(db.Model):
     country_prev_election = Column(Date)
     country_next_election = Column(Date)
 
+    def res_dict(self):
+        return {
+            'country_name': self.country_name,
+            'country_id': self.country_id,
+            'language': self.country_language,
+            'description': self.country_description,
+            'iso_id': self.country_isoid,
+            'prev_election': self.country_prev_election,
+            'next_election': self.country_next_election,
+        }
+
 
 class Indicator(db.Model):
     __tablename__ = 'indicatordb'
