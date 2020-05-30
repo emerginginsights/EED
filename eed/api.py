@@ -1,5 +1,6 @@
 """API endpoints for countries and stats"""
 from collections import defaultdict
+from typing import Dict, List, Any, DefaultDict
 
 from flask import Blueprint, request
 from sqlalchemy import or_
@@ -46,17 +47,25 @@ def country_stats(country_id_or_name):
     indicator_ids - get parameter to specify list of indicators
     (if not specified - all indicators)"""
     country_res = get_country_by_id_or_name(country_id_or_name)
-    res_dict = country_res.res_dict()
+    res_dict = {'country_id': country_res.country_id}
 
-    indicators_query = Indicator.query.filter(Indicator.country_id == country_res.country_id)
+    indicators_query = Indicator.query \
+        .filter(Indicator.country_id == country_res.country_id) \
+        .order_by(Indicator.year)
     indicator_ids = request.args.get('indicator_ids')
     if indicator_ids:
         ids_lst = indicator_ids.split(',')
         indicators_query = indicators_query.filter(Indicator.indicator_id.in_(ids_lst))
+
+    years = [int(i.year) for i in indicators_query.distinct(Indicator.year).all()]
+    res_dict['years'] = years
+    years_num_dict: Dict[int, int] = {v: k for k, v in enumerate(years)}
+
     indicators = indicators_query.all()
-    indicators_dict = defaultdict(dict)
+    indicators_dict: DefaultDict[str, List[Any]] = defaultdict(lambda: [None] * len(years))
     for ind in indicators:
-        indicators_dict[ind.indicator_id][ind.year] = str(ind.indicator_value)
+        year_index: int = years_num_dict[ind.year]
+        indicators_dict[ind.indicator_id][year_index] = float(ind.indicator_value)
     res_dict['indicator_values'] = indicators_dict
 
     return res_dict
