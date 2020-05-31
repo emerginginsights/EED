@@ -2,6 +2,7 @@ import os
 
 from flask import Flask, jsonify
 
+from eed.admin import setup_admin
 from eed.api import stats_api_bp
 from eed.models import db
 
@@ -21,6 +22,8 @@ def create_app(**kwargs):
     db.init_app(app)
 
     app.register_blueprint(stats_api_bp)
+
+    setup_admin(app, db)
 
     @app.route('/ping')
     def ping_pong():
