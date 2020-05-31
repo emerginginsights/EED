@@ -6,8 +6,8 @@ from eed.api import stats_api_bp
 from eed.models import db
 
 
-def create_app():
-    app = Flask(__name__)
+def create_app(**kwargs):
+    app = Flask(__name__, **kwargs)
     app.config.from_pyfile('config.cfg')
 
     # Configure by environment variables
@@ -25,5 +25,9 @@ def create_app():
     @app.route('/ping')
     def ping_pong():
         return jsonify('pong')
+
+    @app.route('/')
+    def index():
+        return app.send_static_file('index.html')
 
     return app
