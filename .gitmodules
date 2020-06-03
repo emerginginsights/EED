@@ -1,0 +1,3 @@
+[submodule "EED-FrontEnd"]
+	path = EED-FrontEnd
+	url = https://github.com/emerginginsights/EED-FrontEnd.git
