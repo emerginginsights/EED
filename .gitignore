@@ -4,3 +4,5 @@ venv
 /eed.tar
 /wbscript/none_countries.json
 /wbscript/results.json
+/none_countries.json
+/results.json

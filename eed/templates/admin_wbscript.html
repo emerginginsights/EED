@@ -1,0 +1,30 @@
+{% extends 'admin/master.html' %}
+{% block body %}
+<h1>Load data from World Bank</h1>
+{% if started %}
+<h3>STARTED</h3>
+<p>it may take much time...</p>
+<div class="progress">
+    <div class="progress-bar progress-bar-striped active" role="progressbar" style="width: 100%">
+        <span class="sr-only">45% Complete</span>
+    </div>
+</div>
+{% else %}
+<form action="{{ url_for('wbscript.run') }}" method="GET">
+    <div class="input-group">
+    <span class="input-group-addon">
+      Year START:
+    </span>
+        <input type="number" name="start" class="form-control"/>
+    </div>
+    <div class="input-group">
+    <span class="input-group-addon">
+      Year END:
+    </span>
+        <input type="number" name="end" class="form-control"/>
+    </div>
+    <input type="submit" class="btn btn-primary" value="Run"/>
+</form>
+{% endif %}
+
+{% endblock %}

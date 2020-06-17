@@ -1,11 +1,11 @@
-import wbdata
-import datetime
 import csv
-import sys
+import datetime
 import json
 import os
+import sys
 
 import psycopg2
+import wbdata
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 
 Country_table = []
@@ -14,6 +14,7 @@ country_list = list()
 indicator_list = list()
 results = list()
 
+SCRIPT_PATH = os.path.dirname(os.path.realpath(__file__))
 
 # Configure by environment variables
 DB_NAME = os.getenv('EED_DB_NAME', 'test_worldbank')
@@ -84,14 +85,14 @@ def indicator_translation(name):
 
 def init_dataset():
     # create global Indicator_table from indicator.cfg
-    with open('Mindicators.csv', newline='') as f:
+    with open(os.path.join(SCRIPT_PATH, 'Mindicators.csv'), newline='') as f:
         reader = csv.reader(f)
         data = list(reader)
         global Indicator_table
         Indicator_table = data[1:]
 
     # create global Country_table from indicator.cfg
-    with open('Mcountries.csv', newline='') as f:
+    with open(os.path.join(SCRIPT_PATH, 'Mcountries.csv'), newline='') as f:
         reader = csv.reader(f)
         data = list(reader)
         global Country_table
@@ -115,9 +116,10 @@ def init_dataset():
         indicator_dict['indicator_topic'] = indicator[5]
         indicator_list.append(indicator_dict)
 
-def retrieve_external_data():
-    print('Getting data.......')
-    data_date = (datetime.datetime(START_YEAR, 1, 1), datetime.datetime(END_YEAR, 1, 1))
+
+def retrieve_external_data(start_year=START_YEAR, end_year=END_YEAR):
+    print('Getting data.......', start_year, '-', end_year)
+    data_date = (datetime.datetime(start_year, 1, 1), datetime.datetime(end_year, 1, 1))
     indicators = dict()
     for i in Indicator_table:
         indicators[i[0]] = i[1]
@@ -125,6 +127,7 @@ def retrieve_external_data():
     countries = [country[0] for country in Country_table]
 
     res = wbdata.get_dataframe(indicators, country=countries, data_date=data_date)
+    print("fetched...")
     json_res = res.to_dict('index')
 
     none_countries = []
@@ -166,6 +169,7 @@ def retrieve_external_data():
         json.dump(results, outfile)
 
     insert_table('indicatorDB', results)
+    print("Data Loading FINISHED.")
 
 
 def create_db():
@@ -258,49 +262,44 @@ def truncate_table(table_name):
 
 
 def insert_table(table_name, list_data):
-    for item in list_data:
-        con = psycopg2.connect(dbname=DB_NAME, user=DB_USER, password=DB_PASS, host=DB_HOST)
+    with psycopg2.connect(dbname=DB_NAME, user=DB_USER, password=DB_PASS, host=DB_HOST) as con:
         con.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
-        cur = con.cursor()
+        for item in list_data:
+            cur = con.cursor()
+            column_name = str(tuple(item.keys()))
+            value = tuple(item.values())
 
-        column_name = str(tuple(item.keys()))
-        value = tuple(item.values())
+            # formatting quote for db values
+            a = list(value)
+            for idx, i in enumerate(a):
+                if isinstance(i, str):
+                    i = i.replace("'", "''")
+                    a[idx] = i
+            value = str(tuple(a))
 
-        # formatting quote for db values
-        a = list(value)
-        for idx, i in enumerate(a):
-            if isinstance(i, str):
-                i = i.replace("'", "''")
-                a[idx] = i
-        value = str(tuple(a))
+            try:
+                commands = [
+                    '''
+                        INSERT INTO {} {} VALUES {} ;
+                    '''.format(table_name, column_name.replace('\'', ''), value.replace('"', '\'')),
+                ]
+                for sql in commands:
+                    cur.execute(sql)
+                cur.close()
+                con.commit()
 
-        try:
-            commands = [
-                '''
-                    INSERT INTO {} {} VALUES {} ;
-                '''.format(table_name, column_name.replace('\'', ''), value.replace('"', '\'')),
-            ]
-            for sql in commands:
-                cur.execute(sql)
-            cur.close()
-            con.commit()
-
-        except psycopg2.ProgrammingError as e:
-            print(commands)
-            print(e)
-
-        except psycopg2.DataError as e:
-            print(commands)
-            print(e)
-
-        except psycopg2.IntegrityError as e:
-            if 'duplicate key value violates unique constraint' in str(e):
+            except psycopg2.ProgrammingError as e:
                 print(commands)
-                continue
+                print(e)
 
-        finally:
-            if con is not None:
-                con.close()
+            except psycopg2.DataError as e:
+                print(commands)
+                print(e)
+
+            except psycopg2.IntegrityError as e:
+                if 'duplicate key value violates unique constraint' in str(e):
+                    print(commands)
+                    continue
 
 
 def read_table(commands):
