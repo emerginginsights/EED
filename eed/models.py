@@ -6,7 +6,7 @@ db = SQLAlchemy()
 
 
 class Country(db.Model):
-    __tablename__ = 'countrydb'
+    __tablename__ = "countrydb"
 
     country_id = Column(Integer, primary_key=True)
     country_name = Column(String)
@@ -27,18 +27,18 @@ class Country(db.Model):
 
     def res_dict(self):
         return {
-            'country_name': self.country_name,
-            'country_id': self.country_id,
-            'language': self.country_language,
-            'description': self.country_description,
-            'iso_id': self.country_isoid,
-            'prev_election': self.country_prev_election,
-            'next_election': self.country_next_election,
+            "country_name": self.country_name,
+            "country_id": self.country_id,
+            "language": self.country_language,
+            "description": self.country_description,
+            "iso_id": self.country_isoid,
+            "prev_election": self.country_prev_election,
+            "next_election": self.country_next_election,
         }
 
 
 class Indicator(db.Model):
-    __tablename__ = 'indicatordb'
+    __tablename__ = "indicatordb"
 
     indicator_id = Column(Integer, primary_key=True)
     indicator_api_code = Column(String)
@@ -54,7 +54,7 @@ class Indicator(db.Model):
 
 
 class Aggregate(db.Model):
-    __tablename__ = 'aggregatedb'
+    __tablename__ = "aggregatedb"
 
     aggregate_id = Column(Integer, primary_key=True)
     aggregate_name = Column(String)
