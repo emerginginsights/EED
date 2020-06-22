@@ -7,3 +7,4 @@ venv
 /wbscript/results.json
 /none_countries.json
 /results.json
+/.vscode/
