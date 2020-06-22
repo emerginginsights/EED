@@ -8,6 +8,15 @@ import psycopg2
 import wbdata
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 
+# monkey patch for wbdata (update api to v2)
+wbdata.api.BASE_URL = '{}/v2'.format(wbdata.api.BASE_URL)
+wbdata.api.COUNTRIES_URL = "{0}/countries".format(wbdata.api.BASE_URL)
+wbdata.api.ILEVEL_URL = "{0}/incomeLevels".format(wbdata.api.BASE_URL)
+wbdata.api.INDICATOR_URL = "{0}/indicator".format(wbdata.api.BASE_URL)
+wbdata.api.LTYPE_URL = "{0}/lendingTypes".format(wbdata.api.BASE_URL)
+wbdata.api.SOURCES_URL = "{0}/sources".format(wbdata.api.BASE_URL)
+wbdata.api.TOPIC_URL = "{0}/topics".format(wbdata.api.BASE_URL)
+
 Country_table = []
 Indicator_table = []
 country_list = list()
